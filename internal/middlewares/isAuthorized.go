@@ -26,7 +26,7 @@ func IsAuthorized() gin.HandlerFunc {
 			return
 		}
 
-		c.Set("role", claims.Role)
+		c.Set("admin", claims.Role)
 		c.Next()
 	}
 }
